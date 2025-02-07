@@ -7,7 +7,7 @@ metadata:
     konghq.com/protocol: "http"
 spec:
   rules:
-  - host: 192.168.49.2
+  - host: podinfo.local
     http:
       paths:
       - path: /podinfo
@@ -16,4 +16,4 @@ spec:
           service:
             name: podinfo
             port:
-              number: 80 
+              number: 9898 
