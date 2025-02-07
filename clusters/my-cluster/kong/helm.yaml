@@ -16,13 +16,13 @@ spec:
   chart:
     spec:
       chart: kong
-      version: "2.8.0"  # Ajuste a versão conforme necessário
+      version: "2.47.0"
       sourceRef:
         kind: HelmRepository
         name: kong
-      interval: 5m
+  interval: 5m
   values:
     ingressController:
       install: true
     proxy:
-      type: NodePort  # Ou ClusterIP, dependendo do seu caso
+      type: NodePort 
