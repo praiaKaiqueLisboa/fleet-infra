@@ -2,18 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: podinfo-ingress
-  namespace: default  # Defina o namespace correto onde o serviço podinfo está localizado
+  namespace: default
   annotations:
-    konghq.com/protocol: "http"  # Especifica o protocolo para o Kong
+    konghq.com/protocol: "http"
 spec:
   rules:
-  - host: podinfo.local  # Altere para o domínio que você deseja usar
+  - host: podinfo.local
     http:
       paths:
-      - path: /
+      - path: /podinfo
         pathType: Prefix
         backend:
           service:
             name: podinfo
             port:
-              number: 80  # O número da porta exposta pelo serviço podinfo
+              number: 80 
