@@ -6,6 +6,7 @@ metadata:
   annotations:
     konghq.com/protocol: "http"
 spec:
+  ingressClassName: kong
   rules:
   - http:
       paths:
