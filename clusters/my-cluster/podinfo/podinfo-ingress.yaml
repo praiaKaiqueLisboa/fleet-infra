@@ -7,10 +7,9 @@ metadata:
     konghq.com/protocol: "http"
 spec:
   rules:
-  - host: podinfo.local
     http:
       paths:
-      - path: /podinfo
+      - path: /podinfo/*
         pathType: Prefix
         backend:
           service:

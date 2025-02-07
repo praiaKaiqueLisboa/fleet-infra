@@ -25,4 +25,4 @@ spec:
     ingressController:
       install: true
     proxy:
-      type: NodePort 
+      type: LoadBalancer 
