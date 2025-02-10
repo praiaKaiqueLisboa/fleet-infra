@@ -3,9 +3,4 @@ kind: Kustomization
 
 resources:
   - ../../base/podinfo
-
-patches:
-  - target:
-      kind: Ingress
-      name: podinfo-ingress
-    path: patch-ingress.yaml
+  - rate-limited-ingress.yaml
