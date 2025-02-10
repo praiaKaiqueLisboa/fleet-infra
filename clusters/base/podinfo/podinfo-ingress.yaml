@@ -1,5 +1,5 @@
 apiVersion: configuration.konghq.com/v1
-kind: IngressRoute
+kind: KongIngress
 metadata:
   name: podinfo-ingress
   namespace: default
