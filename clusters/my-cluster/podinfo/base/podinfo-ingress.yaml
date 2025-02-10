@@ -6,7 +6,6 @@ metadata:
   annotations:
     konghq.com/protocol: "http"
     konghq.com/strip-path: "true"
-    konghq.com/plugins: podinfo-ratelimit
 spec:
   ingressClassName: kong
   rules:

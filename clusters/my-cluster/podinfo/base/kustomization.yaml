@@ -1,0 +1,5 @@
+resources:
+  - podinfo-ingress.yaml
+  - podinfo-kustomization.yaml
+  - podinfo-source.yaml
+  - rate-limiter.yaml

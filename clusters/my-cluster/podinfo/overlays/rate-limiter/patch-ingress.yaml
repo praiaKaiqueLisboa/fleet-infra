@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: podinfo-ingress
+spec:
+  rules:
+    - host: podinfo.local
+      http:
+        paths:
+          - path: /version  
+            pathType: Prefix
+            annotations:
+              konghq.com/plugins: podinfo-ratelimit
+            backend:
+              service:
+                name: podinfo-service
+                port:
+                  number: 80
