@@ -1,5 +1,5 @@
 - op: add
-  path: "/spec/rules/spec/rules/0/http/paths"
+  path: "/spec/rules/0/http/paths"
   value:             
      path: /version  
      pathType: Prefix
