@@ -1,5 +1,5 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: configuration.konghq.com/v1
+kind: IngressRoute
 metadata:
   name: podinfo-ingress
   namespace: default

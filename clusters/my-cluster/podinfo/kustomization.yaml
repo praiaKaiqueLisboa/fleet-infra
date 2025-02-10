@@ -6,6 +6,6 @@ resources:
 
 patches:
   - target:
-      kind: Ingress
+      kind: IngressRoute
       name: podinfo-ingress
     path: patch-ingress.yaml

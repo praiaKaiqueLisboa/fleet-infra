@@ -3,10 +3,10 @@
   value:             
      path: /version  
      pathType: Prefix
-     annotations:
-       konghq.com/plugins: podinfo-ratelimit
+     plugins:
+      - name: podinfo-ratelimit
      backend:
        service:
-         name: podinfo-service
+         name: podinfo
          port:
            number: 80
