@@ -1,0 +1,10 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: podinfo-ratelimit
+  namespace: default
+config:
+  minute: 1  # 1 req/minute
+  policy: local  # Locally stores req info
+  limit_by: ip
+plugin: rate-limiting
