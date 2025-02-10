@@ -2,7 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: podinfo-ingress
+  namespace: default
+  annotations:
+    konghq.com/protocol: "http"
+    konghq.com/strip-path: "true"
 spec:
+  ingressClassName: kong
   rules:
     - host: podinfo.local
       http:
