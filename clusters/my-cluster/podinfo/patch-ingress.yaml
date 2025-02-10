@@ -12,7 +12,8 @@ spec:
     - host: podinfo.local
       http:
         paths:
-          - path: /version  
+          - $patch: merge
+            path: /version  
             pathType: Prefix
             annotations:
               konghq.com/plugins: podinfo-ratelimit
