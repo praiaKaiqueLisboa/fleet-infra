@@ -6,6 +6,6 @@ resources:
 
 patches:
   - target:
-      kind: KongIngress
+      kind: Ingress
       name: podinfo-ingress
     path: patch-ingress.yaml
