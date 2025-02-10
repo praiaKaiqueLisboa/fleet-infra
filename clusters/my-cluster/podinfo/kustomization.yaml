@@ -4,5 +4,10 @@ kind: Kustomization
 resources:
   - ../../base/podinfo
 
-patchesStrategicMerge:
-  - patch-ingress.yaml
+patches:
+  - target:
+      kind: Ingress
+      metadata:
+      name: podinfo-ingress
+      namespace: default
+    path: patch-ingress.yaml
