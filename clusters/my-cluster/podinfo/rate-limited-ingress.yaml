@@ -5,15 +5,16 @@ metadata:
   namespace: default
   annotations:
     konghq.com/protocol: "http"
-    konghq.com/override: podinfo-strip
     konghq.com/plugins: "podinfo-ratelimit"
+    konghq.com/rewrite: "/version"
+    konghq.com/strip-path: 'true'
 spec:
   ingressClassName: kong
   rules:
   - http:
       paths:
       - path: /podinfo/version
-        pathType: Prefix
+        pathType: Exact
         backend:
           service:
             name: podinfo

@@ -4,3 +4,9 @@ kind: Kustomization
 resources:
   - ../../base/podinfo
   - rate-limited-ingress.yaml
+
+patches:
+  - path: podinfo-service-patch.yaml
+    target:
+      kind: Service
+      name: podinfo
