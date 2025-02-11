@@ -23,6 +23,7 @@ apiVersion: configuration.konghq.com/v1
 kind: KongIngress
 metadata:
   name: podinfo-strip
+  namespace: default
 route:
   strip_path: true
   regex_priority: 100
