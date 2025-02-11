@@ -5,7 +5,7 @@ metadata:
   namespace: default
   annotations:
     konghq.com/protocol: "http"
-    konghq.com/strip-path: "true"
+    konghq.com/override: podinfo-strip
 spec:
   ingressClassName: kong
   rules:
@@ -18,3 +18,13 @@ spec:
             name: podinfo
             port:
               number: 9898 
+---
+apiVersion: configuration.konghq.com/v1
+kind: KongIngress
+metadata:
+  name: podinfo-strip
+route:
+  strip_path: true
+  regex_priority: 100
+  paths:
+    - ~/podinfo(/.*)
