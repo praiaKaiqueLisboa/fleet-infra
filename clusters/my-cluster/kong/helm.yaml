@@ -24,5 +24,7 @@ spec:
   values:
     ingressController:
       install: true
+      env:
+        feature_gates: RewriteURIs=true
     proxy:
       type: LoadBalancer 
